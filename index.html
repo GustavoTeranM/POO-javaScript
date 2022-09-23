@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleado</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body background="https://fondosmil.com/fondo/31871.jpg">
+
+    <div class="container" style="background-color:#ffffff;">
+
+
+        <center>
+            <h1>Sistema de empleados</h1>
+        </center>
+        <div class="row">
+
+
+            <div class="container" style="background-color:#7cdbaf;">
+                <h2> Datos personales </h2>
+
+                <div class="row">
+
+                    <div class="col-7">
+
+                        <label class="form-label">Nombres:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+
+                        <label class="form-label">Apellidos:</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido">
+
+                        <br>
+                        <select class="form-select" aria-label="Default select example">
+              <option selected>Género:</option>
+              <option value="1">Masculino</option>
+              <option value="2">Femenino</option>
+
+            </select>
+                        <br>
+                        <label class="form-label">Fecha de Nacimiento:</label>
+
+                        <input type="date" class="form-control" id="diaN" name="diaN">
+                        <br>
+
+                        <label class="form-label">Fecha de ingreso:</label>
+                        <input type="date" class="form-control" id="diaI" name="diaI">
+
+                        <br>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <p>
+                            <img src="img/4.jpg" align="left" width="400" height="400">
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="container" style="background-color:#99d8d3; ">
+                <h2> Salario</h2>
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <label type="text" class="form-control" id="salario1" name="salario1" aria-label="Example text with button addon" aria-describedby="button-addon1" disabled>0</label>
+
+                    </div>
+
+                    <div class="col-auto">
+                        <a href="#" class="btn btn-primary" id="modificar" name="modificar" onclick="modificarsalario()">Modificar</a>
+
+                    </div>
+                </div>
+
+                <br>
+            </div>
+
+            <div class="container" style="background-color:#7cdbaf;">
+
+
+                <div class="row">
+
+                    <div class="col-6">
+                        <br>
+                        <h2> Cálculos</h2>
+
+
+                        <div class="row">
+                            <div class="col-auto">
+                                <a href="#" class="btn btn-primary" id="calc" name="modificar" onclick="edad()">Calcular Edad</a>
+                            </div>
+
+                            <div class="col-auto">
+                                <label id="ed" class="form-label"></label>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <a href="#" class="btn btn-primary" id="calc" name="modificar  " onclick="anti()">Calcular
+                    Antiguedad</a>
+                                </div>
+
+                                <div class="col-auto">
+                                    <label class="form-label"></label>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <a href="#" class="btn btn-primary" id="calc" name="modificar" onclick="prestaciones()">Calcular
+                      prestaciones</a>
+
+                                    </div>
+
+
+                                    <br>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="col-6">
+                        <h4> Si tiene trabajado horas extras por favor ingreselas</h4>
+                        <br>
+                        <p> Cada Hora extra tiene un valor de $ 20.000 pesos </p>
+
+                        <div class="row">
+
+
+                            <div class="row ">
+                                <label for="colFormLabel" class="col-sm-4 col-form-label">Horas Extras </label> <br>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" id="horas" placeholder="">
+                                </div><br><br>
+
+                                <button type="button" class="btn btn-secondary" onclick="horasextras()">Calcular Horas Extras </button>
+                            </div>
+
+                        </div> <br>
+
+                        <div class="row">
+
+                            <p> Si ha trabajado horario nocturno tiene derecho a obtener un bono de transporte dependiendo los dias trabajados en la noche
+                            </p>
+
+
+                            <div class="row ">
+                                <label for="colFormLabel" class="col-sm-5 col-form-label">N° Dias Nocturnos </label>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" id="trasporte" placeholder="">
+                                </div><br> <br>
+
+                                <button type="button" class="btn btn-secondary" onclick="trasporte()">Calcular Auxilio de Trasporte
+                </button>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <br><br>
+                    </div>
+
+</body>
+
+</html>
